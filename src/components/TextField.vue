@@ -1,9 +1,21 @@
 <template>
-  <div class="text-field-component" contenteditable="true" ref="textField" @keypress.enter="getTextFieldValue"></div>
+  <div class="text-field-component-wrapper">
+    <div
+      class="text-field-component"
+      contenteditable="true"
+      ref="textField"
+    ></div>
+    <Button @click.native="getTextFieldValue" />
+  </div>
 </template>
 
 <script>
+import Button from "../components/Button.vue";
+
 export default {
+  components: {
+    Button,
+  },
   data() {
     return {
       text: "",
@@ -11,9 +23,9 @@ export default {
   },
   methods: {
     getTextFieldValue() {
-      this.$emit('getTextFieldValue', this.$refs.textField.innerText)
-      this.$refs.textField.innerText = null
-    }
+      this.$emit("getTextFieldValue", this.$refs.textField.innerText);
+      this.$refs.textField.innerText = null;
+    },
   },
 };
 </script>

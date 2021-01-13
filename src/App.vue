@@ -15,10 +15,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 #app {
   display: flex;
   justify-content: center;
-  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
 }
 </style>

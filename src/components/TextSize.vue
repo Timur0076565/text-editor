@@ -9,7 +9,7 @@
       :key="index"
       :value="fontSizeOption"
     >
-      {{ fontSizeOption }}px
+      {{ fontSizeOption }}
     </option>
   </select>
 </template>
@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      selected: "10",
+      selected: "12px",
     };
   },
   methods: {
@@ -40,7 +40,8 @@ export default {
 <style scoped>
 .text-size-component {
   min-width: 55px;
-	height: 30px;
+	height: 24px;
 	outline: none;
+	border: none;
 }
 </style>
